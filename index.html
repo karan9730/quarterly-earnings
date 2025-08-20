@@ -1,162 +1,85 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>Quarterly Earnings – Interactive Reveal.js Deck
-  23f2000485@ds.study.iitm.ac.in</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quarterly Earnings Report</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/monokai.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
 
-  <!-- Reveal.js core CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/reveal.css" />
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/theme/black.css" id="theme" />
-  <!-- Syntax highlighting theme -->
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/plugin/highlight/monokai.css" />
-  <!-- Optional: small style tweaks -->
-  <style>
-    .subtitle { font-size: 0.9rem; opacity: 0.8; margin-top: .4rem; }
-    .email { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
-    .kpi { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
-    .kpi .card { border-radius: 16px; padding: 1rem; background: rgba(255,255,255,0.05); box-shadow: 0 6px 18px rgba(0,0,0,.25); }
-    .kpi .value { font-size: 2.2rem; font-weight: 700; }
-    .badge { display:inline-block; padding: .25rem .5rem; border-radius:999px; background:#1f6feb; }
-  </style>
-</head>
-<body>
-  <p class="subtitle">Contact: <span class="email">23f2000485@ds.study.iitm.ac.in</span></p>
-  <div class="reveal">
-    <div class="slides">
+        <!-- Title Slide with email -->
+        <section>
+          <h1>Quarterly Earnings Report</h1>
+          <p><small>Technical Consultant</small></p>
+          <p><small>Email: <a href="mailto:23f2000485@ds.study.iitm.ac.in">23f2000485@ds.study.iitm.ac.in</a></small></p>
+          <aside class="notes">
+            Introduce yourself, your role, and the purpose of this report.
+          </aside>
+        </section>
 
-      <!-- Title Slide -->
-      <section>
-        <h1>Quarterly Earnings Report
-        23f2000485@ds.study.iitm.ac.in
-        </h1>
-        <p><small>Technical Consultant
-        23f2000485@ds.study.iitm.ac.in
-        </small></p>
-        <p><small>Email: <a href="mailto:23f2000485@ds.study.iitm.ac.in">23f2000485@ds.study.iitm.ac.in</a></small></p>
-        <aside class="notes">
-          Introduce yourself, your role, and the purpose of this report.
-          23f2000485@ds.study.iitm.ac.in
-        </aside>
-      </section>
+        <!-- Markdown Slide -->
+        <section data-markdown>
+          <textarea data-template>
+            ## Performance Overview
+            - Revenue growth exceeded forecasts
+            - Operating margin improved
+            - Strong quarter across all divisions
+          </textarea>
+          <aside class="notes">
+            Highlight the key wins of the quarter.
+          </aside>
+        </section>
 
-      <!-- KPI Snapshot with Fragments (animated) -->
-      <section>
-        <h3>Q2 Snapshot
-        23f2000485@ds.study.iitm.ac.in
-        </h3>
-        <div class="kpi">
-          <div class="card fragment" data-fragment-index="1">
-            <div class="value">₹ 1,245 Cr</div>
-            <div>Revenue
-              23f2000485@ds.study.iitm.ac.in
-              <span class="badge">+7.8% YoY</span></div>
-          </div>
-          <div class="card fragment" data-fragment-index="2">
-            <div class="value">₹ 212 Cr</div>
-            <div>Net Income
-              23f2000485@ds.study.iitm.ac.in
-              <span class="badge">+4.2% YoY</span></div>
-          </div>
-          <div class="card fragment" data-fragment-index="3">
-            <div class="value">18.1%
-            23f2000485@ds.study.iitm.ac.in
-            </div>
-            <div>Operating Margin</div>
-          </div>
-        </div>
-        <aside class="notes">
-          KPIs appear sequentially using fragments. Call out trends and any drivers (pricing, volumes, mix, one-offs).
-          23f2000485@ds.study.iitm.ac.in
-        </aside>
-      </section>
+        <!-- Fragments -->
+        <section>
+          <h2>Key Drivers</h2>
+          <ul>
+            <li class="fragment">Increased customer acquisition</li>
+            <li class="fragment">Higher product retention</li>
+            <li class="fragment">Operational efficiencies</li>
+          </ul>
+          <aside class="notes">
+            Reveal each point gradually for emphasis.
+          </aside>
+        </section>
 
-      <!-- A slide written in Markdown -->
-      <section data-markdown>
-        <textarea data-template>
-### Highlights (Markdown)
+        <!-- Code Highlighting -->
+        <section>
+          <h2>Code Sample</h2>
+          <pre><code class="python">def npv(rate, cashflows):
+    return sum(cf / (1 + rate)**i for i, cf in enumerate(cashflows))
 
-- **Retail Banking**: deposit growth **+11% YoY**
-- **Corporate Lending**: fee income resilient; underwriting pipeline strong
-- **Asset Quality**: GNPA improving; provision coverage > **70%**
-- **Capital**: CET1 comfortably above regulatory minimums
+print(npv(0.1, [-1000, 200, 300, 400, 500]))</code></pre>
+          <aside class="notes">
+            This function computes Net Present Value (NPV).
+          </aside>
+        </section>
 
-> _Note:_ This slide is authored in **Markdown** and rendered by the Reveal.js Markdown plugin.
-        </textarea>
-        <aside class="notes">This satisfies the requirement for a markdown-authored slide.</aside>
-      </section>
+        <!-- Math Equations -->
+        <section>
+          <h2>Financial Formula</h2>
+          <p>$$NPV = \sum_{t=0}^{T} \frac{C_t}{(1+r)^t}$$</p>
+          <aside class="notes">
+            Explain NPV and why it matters for valuation.
+          </aside>
+        </section>
 
-      <!-- Code Samples with syntax highlighting -->
-      <section>
-        <h3>Code: Quick NPV/IRR Utilities</h3>
-        <pre><code class="language-python">import numpy as np
-
-cash_flows = [-1000, 250, 300, 400, 500]
-r = 0.10  # discount rate
-
-# Net Present Value
-npv = sum(cf / ((1 + r) ** t) for t, cf in enumerate(cash_flows))
-print(f"NPV @ 10% = {npv:.2f}")
-
-# Internal Rate of Return (naïve)
-irr = np.irr(cash_flows)  # numpy_financial.irr in newer stacks
-print(f"IRR = {irr:.2%}")
-</code></pre>
-        <aside class="notes">Demonstrate syntax highlighting and connect to the financial context.</aside>
-      </section>
-
-      <!-- Financial Math: KaTeX equations -->
-      <section>
-        <h3>Financial Formulae</h3>
-        <p>Net Present Value:</p>
-        <p>$$\mathrm{NPV} = \sum_{t=0}^{T} \frac{CF_t}{(1+r)^t}$$</p>
-        <p>Compound Annual Growth Rate (CAGR):</p>
-        <p>$$\mathrm{CAGR} = \left(\frac{\text{Ending}}{\text{Beginning}}\right)^{\tfrac{1}{n}} - 1$$</p>
-        <p>Sharpe Ratio:</p>
-        <p>$$\mathrm{Sharpe} = \frac{E[R_p - R_f]}{\sigma_p}$$</p>
-        <aside class="notes">Use these when explaining valuation, growth, and risk-adjusted returns.</aside>
-      </section>
-
-      <!-- Agenda with fragments -->
-      <section>
-        <h3>Agenda</h3>
-        <ul>
-          <li class="fragment">Macro &amp; Market Backdrop</li>
-          <li class="fragment">Business Segment Performance</li>
-          <li class="fragment">Capital &amp; Liquidity</li>
-          <li class="fragment">Outlook &amp; Guidance</li>
-        </ul>
-        <aside class="notes">Advance one point at a time to maintain focus.</aside>
-      </section>
-
-      <!-- Closing slide -->
-      <section>
-        <h2>Thank You</h2>
-        <p>Questions? Reach out at <span class="email">23f2000485@ds.study.iitm.ac.in</span></p>
-        <p class="subtitle">This deck is ready for GitHub Pages deployment.</p>
-        <aside class="notes">Invite questions and transition to Q&amp;A.</aside>
-      </section>
-
+      </div>
     </div>
-  </div>
 
-  <!-- Reveal.js core JS -->
-  <script src="https://unpkg.com/reveal.js@5/dist/reveal.js"></script>
-  <!-- Plugins: Markdown, Notes, Highlight, Math (KaTeX) -->
-  <script src="https://unpkg.com/reveal.js@5/plugin/markdown/markdown.js"></script>
-  <script src="https://unpkg.com/reveal.js@5/plugin/notes/notes.js"></script>
-  <script src="https://unpkg.com/reveal.js@5/plugin/highlight/highlight.js"></script>
-  <script src="https://unpkg.com/reveal.js@5/plugin/math/math.js"></script>
-
-  <script>
-    Reveal.initialize({
-      hash: true,
-      slideNumber: true,
-      progress: true,
-      plugins: [ RevealMarkdown, RevealNotes, RevealHighlight, RevealMath.KaTeX ],
-      // Optional: center: false,
-    });
-  </script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/math/math.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
+      });
+    </script>
+  </body>
 </html>
